@@ -13252,12 +13252,11 @@ div#notebook {
         <span class="n">resulting_apys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">resulting_apy</span><span class="p">)</span>
         <span class="n">max_percent_apy_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">resulting_apy</span><span class="o">-</span><span class="n">vault_apy</span><span class="p">)</span><span class="o">/</span><span class="n">vault_apy</span> <span class="o">*</span> <span class="mi">100</span>
         <span class="n">max_percent_apy_changes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">max_percent_apy_change</span><span class="p">)</span>
-    
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">max_percent_apy_changes</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">setOptions</span><span class="p">(</span><span class="n">xlim</span><span class="p">,</span><span class="n">ylim</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">opts</span>
+    <span class="c1">#global opts</span>
     <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;xlim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlim</span><span class="p">),</span>
         <span class="s1">&#39;ylim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ylim</span><span class="p">),</span>
@@ -13266,10 +13265,10 @@ div#notebook {
         <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Vault APY vs Max Percent APY Change&#39;</span><span class="p">,</span>
         <span class="s1">&#39;animation_duration&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
     <span class="p">}</span>
+    <span class="k">return</span> <span class="n">nbi</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">y_reserves</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">tranche_length</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">time_stretch</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">options</span><span class="o">=</span><span class="n">opts</span><span class="p">)</span>
     
 
 <span class="n">interact</span><span class="p">(</span><span class="n">setOptions</span><span class="p">,</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3000</span><span class="p">))</span>
-<span class="n">nbi</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">y_reserves</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="n">tranche_length</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">time_stretch</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">options</span><span class="o">=</span><span class="n">opts</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13300,11 +13299,9 @@ div#notebook {
 
 
 
-  <div class="output_subarea output_widget_view ">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function __main__.setOptions(xlim, ylim)&gt;</pre>
+</div>
 
 </div>
 
